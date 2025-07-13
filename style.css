@@ -1,0 +1,268 @@
+/* --- General Body and Typography --- */
+body {
+    font-family: 'Quicksand', sans-serif; /* A friendly, modern sans-serif font */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Light azure background for a fresh feel */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure footer stays at bottom */
+}
+
+header {
+    background-color: #6a1b9a; /* Deep purple */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive; /* A fun, script-style font for the title */
+    font-size: 2.8em;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+main {
+    flex-grow: 1; /* Allows main content to take up available space */
+    display: flex;
+    flex-wrap: wrap; /* Allows sections to wrap on smaller screens */
+    justify-content: center;
+    gap: 30px; /* Space between sections */
+    padding: 30px 20px;
+    max-width: 1200px; /* Max width for content */
+    margin: 20px auto; /* Center content */
+}
+
+/* --- Section Styling (Form & Output) --- */
+.smoothie-form-section,
+.smoothie-output-section {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 550px; /* Max width for each section */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+.smoothie-output-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content vertically */
+    text-align: center;
+}
+
+h2 {
+    color: #6a1b9a; /* Deep purple for section titles */
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 25px;
+    text-align: center;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+/* --- Form Styling --- */
+.smoothie-form .form-group {
+    margin-bottom: 20px;
+}
+
+.smoothie-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #4a148c; /* Slightly darker purple for labels */
+}
+
+.smoothie-form input[type="text"],
+.smoothie-form select,
+.smoothie-form textarea {
+    width: calc(100% - 20px); /* Account for padding */
+    padding: 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding in width */
+    transition: border-color 0.3s ease;
+}
+
+.smoothie-form input[type="text"]:focus,
+.smoothie-form select:focus,
+.smoothie-form textarea:focus {
+    border-color: #9c27b0; /* Lighter purple on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(156, 39, 176, 0.3);
+}
+
+/* Ingredient Checkbox Grid */
+.ingredient-group h3 {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: #7b1fa2; /* Medium purple for ingredient categories */
+    font-size: 1.2em;
+    border-bottom: 1px dashed #e0e0e0;
+    padding-bottom: 5px;
+}
+
+.checkbox-grid,
+.radio-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 10px;
+}
+
+.checkbox-grid label,
+.radio-group label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0; /* Override default label margin */
+    font-weight: 400; /* Lighter weight for options */
+}
+
+.checkbox-grid input[type="checkbox"],
+.radio-group input[type="radio"] {
+    margin-right: 8px;
+    transform: scale(1.1); /* Slightly larger checkboxes/radios */
+}
+
+/* Order Button */
+button#orderSmoothieBtn {
+    display: block;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #ff9800; /* Vibrant orange */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button#orderSmoothieBtn:hover {
+    background-color: #f57c00; /* Darker orange on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+button#orderSmoothieBtn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Smoothie Display Output --- */
+.smoothie-display {
+    min-height: 200px; /* Ensure space even if empty */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Take full width of its container */
+}
+
+.smoothie-card {
+    background-color: #fcfcfc;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 400px; /* Max width for the smoothie card */
+    text-align: left; /* Align text within card */
+}
+
+.smoothie-card h3 {
+    font-family: 'Pacifico', cursive;
+    color: #e91e63; /* Pink for smoothie name */
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.smoothie-card p {
+    margin: 8px 0;
+    font-size: 1.05em;
+    color: #555;
+}
+
+.smoothie-card p strong {
+    color: #7b1fa2; /* Purple for strong labels */
+}
+
+.smoothie-image {
+    max-width: 150px;
+    height: auto;
+    border-radius: 50%; /* Make image round */
+    border: 5px solid #ff9800; /* Orange border */
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(255, 152, 0, 0.4); /* Glow effect */
+}
+
+.smoothie-price {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #4CAF50; /* Green for price */
+    margin-top: 25px;
+    border-top: 1px dashed #ddd;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.placeholder-text {
+    font-style: italic;
+    color: #888;
+    text-align: center;
+    padding: 30px;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #6a1b9a;
+    color: #fff;
+    font-size: 0.9em;
+    margin-top: 30px; /* Space above footer */
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center;
+        padding: 20px 15px;
+    }
+
+    .smoothie-form-section,
+    .smoothie-output-section {
+        max-width: 100%; /* Take full width on smaller screens */
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .checkbox-grid,
+    .radio-group {
+        grid-template-columns: 1fr; /* Stack options on very small screens */
+    }
+}
