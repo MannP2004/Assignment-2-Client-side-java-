@@ -200,23 +200,23 @@ function getSmoothieImage(fruits, veggies) {
     const hasAvocado = fruits.includes('avocado'); // Avocado is a fruit botanically, but often used for green smoothies
 
     if (hasGreenVeggies || hasAvocado) {
-        return 'images/green-smoothie.jpg'; // Assuming you have a green smoothie image
+        return './green-smoothie.jpg'; // Assuming you have a green smoothie image
     }
 
     // Check for berry ingredients
     const hasBerries = fruits.some(fruit => ['strawberry', 'blueberry', 'raspberry'].includes(fruit));
     if (hasBerries) {
-        return 'images/berry-smoothie.jpg'; // Assuming you have a berry smoothie image
+        return './berry-smoothie.jpg'; // Assuming you have a berry smoothie image
     }
 
     // Check for tropical ingredients
     const hasTropical = fruits.some(fruit => ['mango', 'pineapple'].includes(fruit));
     if (hasTropical) {
-        return 'images/tropical-smoothie.jpg'; // Assuming you have a tropical smoothie image
+        return './tropical-smoothie.jpg'; // Assuming you have a tropical smoothie image
     }
 
     // Default image if no specific category matches
-    return 'images/default-smoothie.jpg'; // Assuming a generic smoothie image
+    return './default-smoothie.jpg'; // Assuming a generic smoothie image
 }
 
 // Initial state: ensure the placeholder text is visible
